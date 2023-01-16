@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - '*'
-    paths-ignore:
-      - 'charts/**'
 
 jobs:
   lint:
@@ -17,6 +15,7 @@ jobs:
         uses: golangci/golangci-lint-action@v2
         with:
           version: latest
+          args: --timeout=5m
 
   build:
     name: build
