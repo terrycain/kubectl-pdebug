@@ -12,7 +12,7 @@ Run privileged ephemeral debug containers.
 This is a near clone of `kubectl debug` focusing on running ephemeral containers alongside pods whilst
 allowing you to specify additional capabilities or to run as privileged.
 
-Main reasoning for this was to run strace with the `SYS_PTRACE` capability
+Main reasoning for this was to run strace with the `SYS_PTRACE` capability. This should really be part of `kubectl debug` but adding to that would take longer than making a plugin.
 
 ## Example
 
